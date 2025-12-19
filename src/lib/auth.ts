@@ -20,6 +20,7 @@ const users = [
 ]
 
 export const authOptions: AuthOptions = {
+    secret: process.env.NEXTAUTH_SECRET || 'edurescue-secret-key-dev-only-change-in-production',
     providers: [
         CredentialsProvider({
             name: 'credentials',
