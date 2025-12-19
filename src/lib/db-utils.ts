@@ -1,6 +1,6 @@
 import clientPromise from './mongodb'
-import { User, UserSchema } from '@/models/User'
-import { Session, SessionSchema } from '@/models/Session'
+import { User, UserSchema } from './models/User'
+import { Session, SessionSchema } from './models/Session'
 
 export async function connectToDatabase() {
     try {

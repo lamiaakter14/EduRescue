@@ -1,4 +1,4 @@
-import NextAuth from 'next-auth'
+import NextAuth, { AuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 
 // Simple demo users
@@ -19,7 +19,7 @@ const users = [
     }
 ]
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
     providers: [
         CredentialsProvider({
             name: 'credentials',
@@ -71,6 +71,9 @@ export const authOptions = {
         }
     }
 }
+
+// Export the auth configuration for getServerSession
+export const auth = authOptions
 
 // Export the auth function directly
 export default NextAuth(authOptions)
